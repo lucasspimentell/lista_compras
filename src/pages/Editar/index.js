@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link,useLocation,useNavigate } from "react-router-dom";
+import'./editar.css'
 
 function Editar() {
     const navigate = useNavigate()
@@ -29,12 +30,14 @@ function Editar() {
 
 
     return(
-        <div>
-            <form onSubmit={confirmar}>
+        <div className="editarContainer">
+            <form onSubmit={confirmar} className="editarForm">
                 <h1>Editar</h1>
-            <input type="text" value={input} onChange={(e)=>setinput(e.target.value)}/>
-            <button type="submit">Confirmar</button>
-            <button><Link to='/'>Cancelar</Link></button>
+            <input className="editarInput" type="text" value={input} onChange={(e)=>setinput(e.target.value)}/>
+            <div className="containerBtn">
+                <button className="confirmar" type="submit">Confirmar</button>
+            <button className="cancelar"><Link to='/'>Cancelar</Link></button>
+            </div>
             </form>
         </div>
     )

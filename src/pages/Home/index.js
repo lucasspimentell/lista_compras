@@ -108,9 +108,9 @@ function Home() {
                 <div className="formContainer">
                     <form onSubmit={adicionar}>
 
-                        <input type="text" value={input} onChange={(e) => setIput(e.target.value)} />
+                        <input type="text" value={input} onChange={(e) => setIput(e.target.value)} placeholder="Adicione o produto"/>
 
-                        <button type="submit">+</button>
+                        <button className="add" type="submit">+</button>
 
 
                     </form>
@@ -129,7 +129,7 @@ function Home() {
                     <div className="nomeValor">
                     <p className={item.concluida ? "verificada" : ""}>{item.produtoName} </p>
 
-                    <span> R$:</span> <input type="text" step="0.01" value={item.valor} onChange={(e) => totalFunc(item.id, e.target.value)} />
+                    <span> R$:</span> <input type="text" step="0.01" value={item.valor} onChange={(e) => totalFunc(item.id, e.target.value)}  placeholder="0,00"/>
                     </div>
 
                     <input type="checkbox" checked={item.concluida} id="verificado" onClick={() => verificar(item.id)}/>
