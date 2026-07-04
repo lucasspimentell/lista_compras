@@ -1,5 +1,5 @@
 .editarContainer{
-     background-color: darkseagreen;
+     background-color: #104911c8;
      height: 100dvh;
      display: flex;
      align-items: center;
@@ -7,15 +7,22 @@
 }
 
 .editarForm{
-    background-color: rgb(121, 190, 121);
+    background-color: #62735647;;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 8px;
     border-radius: 10px;
 }
 
-.editarInput{
+.editarTitulo{
+    display: flex;
+    gap: 10px;
+}
 
+.editarTitulo img{
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
 }
 
 .containerBtn{

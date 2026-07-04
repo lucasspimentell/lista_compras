@@ -32,7 +32,11 @@ function Editar() {
     return(
         <div className="editarContainer">
             <form onSubmit={confirmar} className="editarForm">
+                <div className="editarTitulo">
+                    <img className=" cenEditar" src="/cenoura.png" alt="cenoura" />
                 <h1>Editar</h1>
+                <img className="broEditar" src="/brocolis.png" alt="brocolis" />
+                </div>
             <input className="editarInput" type="text" value={input} onChange={(e)=>setinput(e.target.value)}/>
             <div className="containerBtn">
                 <button className="confirmar" type="submit">Confirmar</button>

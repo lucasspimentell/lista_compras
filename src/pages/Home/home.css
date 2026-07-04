@@ -85,6 +85,7 @@ form .add{
    color: #d8d9d0;
    width: 96%;
    margin: auto;
+   font-weight: 600;
 }
 
 
@@ -179,7 +180,7 @@ form .add{
     width: 43px;
     height: 41px;
     border-radius: 50%;
-    border: solid 1px #ffb703;
+    border: solid 3px #ffb703;
     background-color: #fff;
     cursor: pointer;
 
@@ -217,9 +218,47 @@ form .add{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 63vh;
+    position: relative;
+   
 }
 .vazioIcone{
     width: 200px;
     
+}
+
+.absoluta{
+    position: absolute;
+    width: 60px;
+    opacity: 0.6;
+}
+
+.cen{
+
+    top: 130px;
+    left: 20px;
+
+}
+
+.bro{
+top: 140px;
+left: 270px;
+}
+
+.lim{
+top: 260px;
+left: 20px;
+}
+
+.bis{
+top: 270px;
+left: 250px;
+}
+
+.cola{
+    top: 40px;
+}
+
+.car{
+    top: 330px;
 }

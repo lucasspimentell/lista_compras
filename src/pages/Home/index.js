@@ -121,7 +121,19 @@ function Home() {
             <p className="total"><span>Total: R${total.toFixed(2).replace(".", ",")}</span></p>
 
             <div className="listaProdutos">
-                {produto.length === 0 ? <div className="containerIcone"> <img className="vazioIcone" src="/compras.png" alt="astronalta no carrinho vazio" /> </div>: null }
+                {produto.length === 0 ? <div className="containerIcone"> <img className="vazioIcone" src="/compras.png" alt="astronalta no carrinho vazio" />
+                
+                <img className="absoluta cen" src="/cenoura.png" alt="cenoura" />
+
+                <img className="absoluta bro" src="/brocolis.png" alt="brocolis" />
+                <img className="absoluta lim" src="/limpeza.png" alt="limpeza" />
+                <img className="absoluta bis" src="/biscoito.png" alt="biscoito" />
+
+                <img className="absoluta cola" src="/cola.png" alt="cola" />
+
+                <img className="absoluta car" src="/carne.png" alt="carne" />
+                
+                 </div>: null }
                 {produto.map((item) => {
                     return (
                      <div className="itemContainer" key={item.id}>
