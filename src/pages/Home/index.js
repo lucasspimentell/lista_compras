@@ -131,8 +131,8 @@ function Home() {
                     </div>
 
                     <input type="checkbox" checked={item.concluida} id="verificado" onClick={() => verificar(item.id)}/>
-                    <button className="editar"><Link to="/Editar" state={{ produtoAtual: item }}><img src="/lapis.png" /></Link></button>
-                    <button className="excluir" onClick={() => excluir(item.id)}><img src="/excluir.png" /></button>
+                    <button className="editar"><Link to="/Editar" state={{ produtoAtual: item }}><img src="/lapis.png" alt="lapis"/></Link></button>
+                    <button className="excluir" onClick={() => excluir(item.id)}><img src="/excluir.png" alt="lixeira"/></button>
                                     </div>
                                 )
                 })}
