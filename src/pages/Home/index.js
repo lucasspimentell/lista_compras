@@ -21,7 +21,7 @@ function Home() {
 
     function adicionar(e) {
         e.preventDefault()
-        if (produto === "") {
+        if (input === "") {
             return
         }
 
