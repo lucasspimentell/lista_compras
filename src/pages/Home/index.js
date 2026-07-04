@@ -12,7 +12,7 @@ function Home() {
 
 
     const [id, setId] = useState(Date.now())
-    const [concluida, setConcluida] = useState(false)
+    const [concluida] = useState(false)
 
     useEffect(() => {
         localStorage.setItem("@produto", JSON.stringify(produto))
