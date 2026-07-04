@@ -21,7 +21,9 @@ function Home() {
 
     function adicionar(e) {
         e.preventDefault()
-
+        if (produto === "") {
+            return
+        }
 
         const produtObj = {
             id: id,
