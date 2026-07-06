@@ -3,17 +3,17 @@
   "name": "Minhas compras",
   "icons": [
     {
-      "src": "icone.png",
+      "src": "pedido.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "icone.png",
+      "src": "pedido.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icone.png",
+      "src": "pedido.png",
       "type": "image/png",
       "sizes": "512x512"
     }
