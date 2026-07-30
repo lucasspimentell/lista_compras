@@ -61,6 +61,7 @@ form input{
     padding: 8px;
     border: none;
     border-radius: 8px;
+    
 }
 
 form .add{
@@ -99,7 +100,7 @@ form .add{
     
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 2px;
     gap: 5px;
     margin-bottom: 5px;
     border-bottom: solid 1px #104911;
@@ -112,28 +113,33 @@ form .add{
 }
 
 .itemContainer p{
-    width: 150px;
-    height: 20px;
+    width: 110px;
+    overflow-wrap: break-word; 
+  word-break: break-word;
     padding: 5px;
     background-color: #fff;
     margin-right: 3px;
     font-size: 16px;
+    
 }
 
 .nomeValor{
     display: flex;
+    
+    
 }
 .nomeValor span{
     margin-top:6px ;
 }
 .nomeValor input{
-    margin-top: 5px;
+    margin-top: 0px;
     width: 40px;
     height: 20px;
     text-align: center;
     border: none;
     font-size: 15px;
-    padding: 2px;
+    padding: 4px;
+    
     font-weight: 600;
     background-color: #eaeaf1;
 }
@@ -261,4 +267,10 @@ left: 250px;
 
 .car{
     top: 330px;
+}
+
+.quant{
+    width: 40px !important;
+    background-color: #fcfcfc !important;
+    border: solid 1px rgb(202, 197, 197) !important;
 }
