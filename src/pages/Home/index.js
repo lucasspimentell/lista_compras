@@ -174,7 +174,7 @@ function Home() {
                         {/* quantidade */}
 
                     <div className="nomeValor">
-                    <input className="quant" type="number" step="0.01" placeholder="1" value={item.quant} onChange={(e) => mult(item.id, e.target.value)}/> 
+                    <input className="quant" type="number" step="0.01" placeholder="0" value={item.quant} onChange={(e) => mult(item.id, e.target.value)}/> 
                     <p className={item.concluida ? "verificada" : ""}>{item.produtoName} </p>
 
                     <span> R$:</span> <input type="text" step="0.01" value={item.valor} onChange={(e) => totalFunc(item.id, e.target.value)}  placeholder="0,00"/>
