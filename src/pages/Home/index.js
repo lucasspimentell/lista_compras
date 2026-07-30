@@ -46,7 +46,7 @@ function Home() {
     let total = produto.reduce((acumulador, item) => {
         let textoValor = String(item.valor || "0").replace(",", ".")
         let numberValor = parseFloat(textoValor) || 0
-        let quantidade = parseInt(item.quant) || 1
+        let quantidade = parseInt(item.quant) || 0
 
         return acumulador + (numberValor * quantidade);
     }, 0)
@@ -99,8 +99,23 @@ function Home() {
     }
 
     function mult(id,novaQuant){
+
+        if(novaQuant===""){
+            let produtoQuant = produto.map((item) => {
+            if (item.id === id) {
+                return { ...item, quant: "" }
+            }
+
+            return item;
+        })
+
+        setProduto(produtoQuant)
+            return
+        }
+
+
         
-        const quantidadevalida = Math.max(1,parseInt(novaQuant)||1);
+        const quantidadevalida = Math.max(0,parseInt(novaQuant)||0);
 
         let produtoQuant = produto.map((item) => {
             if (item.id === id) {
@@ -159,7 +174,7 @@ function Home() {
                         {/* quantidade */}
 
                     <div className="nomeValor">
-                    <input className="quant" type="number" placeholder="1" value={item.quant} onChange={(e) => mult(item.id, e.target.value)}/> 
+                    <input className="quant" type="number" step="0.01" placeholder="1" value={item.quant} onChange={(e) => mult(item.id, e.target.value)}/> 
                     <p className={item.concluida ? "verificada" : ""}>{item.produtoName} </p>
 
                     <span> R$:</span> <input type="text" step="0.01" value={item.valor} onChange={(e) => totalFunc(item.id, e.target.value)}  placeholder="0,00"/>
