@@ -11,7 +11,8 @@
 }
 .container{
     background-color:#d8d9d0 ;
-    max-width: 365px;
+    width: 100%;
+    min-width: 365px;
     height: 100vh;
     margin: auto;
     
@@ -59,22 +60,30 @@ form{
 
 form input{
     padding: 8px;
+    width: 180px;
     border: none;
     border-radius: 8px;
+    font-size: 17px;
     
 }
 
 form .add{
-    
-    width: 35px;
-    height: 35px;
-    font-size: 30px;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("adiciona.png");
+    background-size: cover;
     border-radius: 50%;
     margin-left: 5px;
-    color: #d8d9d0;
-    background-color: #104911;
+    
     border: none;
 
+}
+
+.add img{
+     width: 4px;
+    height: 3px;
 }
 .subTitulos{
  
@@ -87,6 +96,8 @@ form .add{
    width: 96%;
    margin: auto;
    font-weight: 600;
+   border-top-left-radius:5px ;
+   border-top-right-radius:5px ;
 }
 
 
@@ -103,7 +114,7 @@ form .add{
     padding: 2px;
     gap: 5px;
     margin-bottom: 5px;
-    border-bottom: solid 1px #104911;
+    border-bottom: solid 1px #6a73565f;
 }
 
 .itemContainer button{
@@ -139,7 +150,7 @@ form .add{
     border: none;
     font-size: 15px;
     padding: 4px;
-    
+    border-radius: 4px;
     font-weight: 600;
     background-color: #eaeaf1;
 }
@@ -153,17 +164,17 @@ form .add{
 
 .vegetais{
     position: absolute;
-    width: 70px;
-    left: 40px;
-    top: 15px;
+    width: 75px;
+    left: 70px;
+    top: 5px;
     opacity: 0.5;
 }
 
 .carrinho{
     position: absolute;
-    width: 70px;
-    left: 270px;
-    top: 15px;
+    width: 75px;
+    left: 295px;
+    top: 5px;
     opacity: 0.6;
 }
 
@@ -193,24 +204,19 @@ form .add{
 }
 
 .itemContainer input[type="checkbox"]:checked {
+    
     display: flex;
     align-items: center;
-   justify-content: center;
-    border: solid 1px #000400;
+    justify-content: center;
+    border: none;
     background-color: #37f008;
-    
-    
-}
-
-.itemContainer input[type="checkbox"]:checked::after {
-    content: "";
-    width: 40px;
-    height: 38px;
     background-image: url("verificar.png");
     background-size: cover;
     
-
+    
 }
+
+
 
 .excluir{
     background-color: rgba(255, 99, 71, 0.778);
@@ -270,7 +276,9 @@ left: 250px;
 }
 
 .quant{
-    width: 40px !important;
+    width: 26px !important;
     background-color: #fcfcfc !important;
     border: solid 1px rgb(202, 197, 197) !important;
+    margin-right: 3px;
+    border-radius: 4px;
 }

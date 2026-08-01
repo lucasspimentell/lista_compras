@@ -27,7 +27,7 @@ function Home() {
 
         const produtObj = {
             id: id,
-            quant:1,
+            quant: 1,
             produtoName: input,
             valor: "",
             concluida: concluida
@@ -98,24 +98,24 @@ function Home() {
         console.log(filtrada)
     }
 
-    function mult(id,novaQuant){
+    function mult(id, novaQuant) {
 
-        if(novaQuant===""){
+        if (novaQuant === "") {
             let produtoQuant = produto.map((item) => {
-            if (item.id === id) {
-                return { ...item, quant: "" }
-            }
+                if (item.id === id) {
+                    return { ...item, quant: "" }
+                }
 
-            return item;
-        })
+                return item;
+            })
 
-        setProduto(produtoQuant)
+            setProduto(produtoQuant)
             return
         }
 
 
-        
-        const quantidadevalida = Math.max(0,parseInt(novaQuant)||0);
+
+        const quantidadevalida = Math.max(0, parseInt(novaQuant) || 0);
 
         let produtoQuant = produto.map((item) => {
             if (item.id === id) {
@@ -137,13 +137,13 @@ function Home() {
                     <h2> de Compras</h2>
                 </div>
                 <img className="vegetais" src="/vegetal.png" alt="" />
-                <img className="carrinho"  src="/carrinho.png" alt="" />
+                <img className="carrinho" src="/carrinho.png" alt="" />
                 <div className="formContainer">
                     <form onSubmit={adicionar}>
 
-                        <input type="text" value={input} onChange={(e) => setIput(e.target.value)} placeholder="Adicione o produto"/>
+                        <input type="text" value={input} onChange={(e) => setIput(e.target.value)} placeholder="Adicione o produto" />
 
-                        <button className="add" type="submit">+</button>
+                        <button className="add" type="submit"></button>
 
 
                     </form>
@@ -155,36 +155,36 @@ function Home() {
 
             <div className="listaProdutos">
                 {produto.length === 0 ? <div className="containerIcone"> <img className="vazioIcone" src="/compras.png" alt="astronalta no carrinho vazio" />
-                
-                <img className="absoluta cen" src="/cenoura.png" alt="cenoura" />
 
-                <img className="absoluta bro" src="/brocolis.png" alt="brocolis" />
-                <img className="absoluta lim" src="/limpeza.png" alt="limpeza" />
-                <img className="absoluta bis" src="/biscoito.png" alt="biscoito" />
+                    <img className="absoluta cen" src="/cenoura.png" alt="cenoura" />
 
-                <img className="absoluta cola" src="/cola.png" alt="cola" />
+                    <img className="absoluta bro" src="/brocolis.png" alt="brocolis" />
+                    <img className="absoluta lim" src="/limpeza.png" alt="limpeza" />
+                    <img className="absoluta bis" src="/biscoito.png" alt="biscoito" />
 
-                <img className="absoluta car" src="/carne.png" alt="carne" />
-                
-                 </div>: null }
+                    <img className="absoluta cola" src="/cola.png" alt="cola" />
+
+                    <img className="absoluta car" src="/carne.png" alt="carne" />
+
+                </div> : null}
                 {produto.map((item) => {
                     return (
-                     <div className="itemContainer" key={item.id}>
+                        <div className="itemContainer" key={item.id}>
 
-                        {/* quantidade */}
+                            {/* quantidade */}
 
-                    <div className="nomeValor">
-                    <input className="quant" type="number" step="0.01" placeholder="0" value={item.quant} onChange={(e) => mult(item.id, e.target.value)}/> 
-                    <p className={item.concluida ? "verificada" : ""}>{item.produtoName} </p>
+                            <div className="nomeValor">
+                                <input className="quant" type="number" step="0.01" placeholder="0" value={item.quant} onChange={(e) => mult(item.id, e.target.value)} />
+                                <p className={item.concluida ? "verificada" : ""}>{item.produtoName} </p>
 
-                    <span> R$:</span> <input type="text" step="0.01" value={item.valor} onChange={(e) => totalFunc(item.id, e.target.value)}  placeholder="0,00"/>
-                    </div>
+                                <span> R$:</span> <input type="text" step="0.01" value={item.valor} onChange={(e) => totalFunc(item.id, e.target.value)} placeholder="0,00" />
+                            </div>
 
-                    <input type="checkbox" checked={item.concluida} id="verificado" onClick={() => verificar(item.id)}/>
-                    <button className="editar"><Link to="/Editar" state={{ produtoAtual: item }}><img src="/lapis.png" alt="lapis"/></Link></button>
-                    <button className="excluir" onClick={() => excluir(item.id)}><img src="/excluir.png" alt="lixeira"/></button>
-                                    </div>
-                                )
+                            <input type="checkbox" checked={item.concluida} id="verificado" onClick={() => verificar(item.id)} />
+                            <button className="editar"><Link to="/Editar" state={{ produtoAtual: item }}><img src="/lapis.png" alt="lapis" /></Link></button>
+                            <button className="excluir" onClick={() => excluir(item.id)}><img src="/excluir.png" alt="lixeira" /></button>
+                        </div>
+                    )
                 })}
 
             </div>
