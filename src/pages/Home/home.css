@@ -91,9 +91,9 @@ form .add{
 .total{
     text-align: end;
    background-color: #6a7356;
-   padding: 3px;
+   padding: 5px;
    color: #d8d9d0;
-   width: 96%;
+   width: 95%;
    margin: auto;
    font-weight: 600;
    border-top-left-radius:5px ;
@@ -160,12 +160,15 @@ form .add{
     width: 95%;
     padding: 5px;
     background-color: #fefae0;
+    border-bottom-left-radius:5px ;
+   border-bottom-right-radius:5px ;
+  
 }
 
 .vegetais{
     position: absolute;
     width: 75px;
-    left: 70px;
+    left: 10%;
     top: 5px;
     opacity: 0.5;
 }
@@ -173,7 +176,7 @@ form .add{
 .carrinho{
     position: absolute;
     width: 75px;
-    left: 295px;
+    left: 79%;
     top: 5px;
     opacity: 0.6;
 }
@@ -183,6 +186,7 @@ form .add{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .listaProdutos button img{
@@ -232,6 +236,7 @@ form .add{
     align-items: center;
     height: 61vh;
     position: relative;
+    
    
 }
 .vazioIcone{
@@ -247,32 +252,32 @@ form .add{
 
 .cen{
 
-    top: 130px;
-    left: 20px;
+    top: 27%;
+    left: 7%;
 
 }
 
 .bro{
-top: 140px;
-left: 270px;
+top: 30%;
+left: 77%;
 }
 
 .lim{
-top: 260px;
-left: 20px;
+top: 63%;
+left: 5%;
 }
 
 .bis{
-top: 270px;
-left: 250px;
+top: 65%;
+left: 70%;
 }
 
 .cola{
-    top: 40px;
+    top: 10%;
 }
 
 .car{
-    top: 330px;
+    top: 80%;
 }
 
 .quant{
